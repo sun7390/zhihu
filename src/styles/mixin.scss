@@ -1,0 +1,25 @@
+$gray: #F2F2F2;
+$white: #fff;
+$black: #000;
+@mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin vertical($type: center){
+    display: flex;
+    align-items: $type;
+}
+@mixin left-icon($left){
+    display: inline-block;
+    position: absolute;
+    left: $left;
+}
+@mixin right-icon($right){
+    display: inline-block;
+    position: absolute;
+    right: $right;
+}
+@mixin font($size,$color) {
+    font-size: $size;
+    color: $color;
+}
