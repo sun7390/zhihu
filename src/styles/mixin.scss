@@ -23,3 +23,16 @@ $black: #000;
     font-size: $size;
     color: $color;
 }
+@mixin align(){
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+}
+@mixin hl($height,$lineheight) {
+    height: $height;
+    line-height: $lineheight;
+}
+@mixin flex($type) {
+    display: flex;
+    justify-content: $type; 
+}

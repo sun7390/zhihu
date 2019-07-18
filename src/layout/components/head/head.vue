@@ -8,10 +8,12 @@
         <section class="right">
             <slot name="file"></slot>
         </section>
+        <tab/>
     </header>
 </template>
 
 <script>
+import tab from '../tab/tab'
 export default {
     data () {
         return {
@@ -19,7 +21,9 @@ export default {
         }
     },
 
-    components: {},
+    components: {
+        tab
+    },
 
     computed: {},
 
@@ -39,17 +43,18 @@ export default {
         position: fixed;
         top: 0;
         left: 0;
-        margin-top: 0.5rem;
+        padding-top: 0.5rem;
         background-color: $white;
+        z-index: 100;
         @include wh(100%,2.75rem);
     }
     .left {
         position: absolute;
-        left: 0.5rem;
+        left: 0.75rem;
         border-radius: 0.6rem;
         background-color: $gray;
         justify-content: space-around;
-        @include wh(90%,2.75rem);
+        @include wh(85%,2.75rem);
         @include vertical;
     }
     .right {
